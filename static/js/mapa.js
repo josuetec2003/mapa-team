@@ -3,6 +3,7 @@ var _lon = -122.4460134;
 var _map = null;
 var _markerFA = null;
 var coordsFer = {lat: 37.768280 , lng: -122.492875};
+var coordsJosue = {lat: 37.804231, lng: -122.433481};
 
 
 function init ()
@@ -18,13 +19,20 @@ function init ()
 	_map = new google.maps.Map($('#mapa')[0], mapConfig);
 
 
+
 	var markerFer = new google.maps.Marker({
 
 		map: _map,
 		position: coordsFer,
 		title: "Fernando Amador",
 		draggable: false
+	});
 
+
+	var markerJosue = new google.maps.Marker({
+		map: _map,
+		position: coordsJosue,
+		title: 'Marcador de Josue'
 	});
 
 }
